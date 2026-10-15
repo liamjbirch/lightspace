@@ -1,0 +1,6 @@
+{
+  "name": "LIGHTSPACE",
+  "description": "An ethereal, immersive, organic platform for the regenerative real estate movement, where land stewards, professionals, and funders connect in harmony with Gaia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

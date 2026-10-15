@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-forest-50: #F4F5F0;
+  --color-forest-100: #D0D4C5;
+  --color-forest-200: #A7AD9B;
+  --color-forest-300: #3E3E2F;
+  --color-forest-400: #5A5A40;
+  --color-forest-500: #5D4037;
+  --color-forest-600: #8C7D6B;
+  --color-forest-700: #736453;
+  --color-forest-800: #DCD6CD;
+  --color-forest-900: #EAE6DC;
+  --color-forest-950: #F4F1EA;
+  
+  --color-amber-gold: #D4A373;
+  --color-earth-sand: #3E3E2F;
+}
+
+/* Ethereal backgrounds and wind animation keyframes */
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.5deg) translateY(0); }
+  50% { transform: rotate(1.5deg) translateY(-2px); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.03); }
+}
+
+@keyframes leaf-fall {
+  0% { transform: translateY(-20px) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateY(105vh) translateX(100px) rotate(360deg); opacity: 0; }
+}
+
+.animate-sway {
+  animation: sway 8s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 10s ease-in-out infinite;
+}
+
+/* Custom scrollbars for natural feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(244, 241, 234, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 125, 107, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 125, 107, 0.6);
+}
+
+/* Base resets to blend with natural scenery */
+body {
+  background-color: #F4F1EA;
+  color: #3E3E2F;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
